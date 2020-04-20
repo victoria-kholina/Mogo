@@ -1,0 +1,35 @@
+@import "vars";
+@import "mixin";
+
+.top-line {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 15px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  -ms-flex-align: center;
+  p {
+    margin-right: 10px;
+    @include desktop {
+      margin-right: 20px;
+    }
+  }
+
+  span  {
+    color: #999;
+    display: inline-block;
+    margin-right: 15px;
+  }
+  .icon {
+    margin-right: 5px;
+  }
+  .svg-icon {
+    fill: $accent-color;
+    height: 16px;
+    width: 14px;
+    margin-right: 10px;
+    @include desktop {
+      margin-right: 15px;
+    }
+  }
+}

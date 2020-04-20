@@ -1,0 +1,24 @@
+@import "vars";
+@import "mixin";
+
+.logos {
+  align-items: center;
+  -ms-flex-align: center;
+  min-height: 200px;
+  @include small-desktop {
+    height: 250px;
+  }
+  &-items {
+    padding: 0 15px;
+    @include only-small-mobile {
+      padding: 50px 0;
+      max-width:  300px;
+      margin: 0 auto;
+    }
+    img {
+      @include to-sm-desktop {
+        height: 100px;
+      }
+    }
+  }
+}

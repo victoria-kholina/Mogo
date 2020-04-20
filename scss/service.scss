@@ -1,0 +1,72 @@
+@import "vars";
+@import "mixin";
+
+.service {
+  padding: 50px 0;
+  @include tablet {
+    padding: 70px 0 40px;
+  }
+  @include small-desktop {
+    padding: 100px 0 70px;
+  }
+  .col {
+    padding: 30px 0;
+    @include only-mobile {
+      border-bottom: 1px solid #e5e5e5;
+    }
+    @include tablet {
+      padding: 5px  10px;
+    }
+    @include desktop {
+      padding: 25px  30px;
+    }
+    @include to-sm-desktop {
+      text-align: center;
+    }
+  }
+  .row {
+    @include tablet {
+      padding-bottom: 20px;
+    }
+    &:last-child {
+      @include tablet {
+        padding-top: 20px;
+        border-top: 1px solid #e5e5e5;
+      }
+      .col {
+        &:last-child {
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  &__desc {
+    max-width: 300px;
+    margin: 0 auto;
+    @include tablet {
+      max-width: 250px;
+      float: right;
+    }
+    @include desktop {
+      max-width: 280px;
+    }
+    h5 {
+      padding-bottom: 15px;
+    }
+  }
+  &__icon {
+    @include to-sm-desktop {
+      display: flex;
+      display: -ms-flexbox;
+      align-items: flex-end;
+      -ms-flex-align: end;
+      justify-content: center;
+      -ms-flex-pack: center;
+      padding-bottom: 20px;
+    }
+    @include small-desktop {
+      float: left;
+    }
+  }
+}

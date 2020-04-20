@@ -1,0 +1,78 @@
+@import "vars";
+@import "mixin";
+
+.welcome {
+  background-image: linear-gradient(rgba(232, 130, 130, 0.9), rgba(252, 227, 138, 0.9)), url("../images/eagle.jpg");
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+  z-index: 0;
+  .container {
+    height: 100vh;
+    padding-top: 25px;
+    box-sizing: border-box;
+  }
+  a {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+  }
+  .col {
+    @include only-mobile {
+      flex-basis: 0;
+    }
+  }
+}
+
+.welcome-desc {
+  text-align: center;
+
+  @include desktop-large-height {
+    margin-top: 15px;
+  }
+
+  &__title {
+    font: bold 50px/.9 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    padding-top: 10px;
+    @include large-mobile {
+      font-size: 90px;
+    }
+    @include tablet {
+      font-size: 110px;
+    }
+    @include desktop-large-height {
+      font-size: 150px;
+      padding-top: 25px;
+    }
+
+    &:after {
+      @include pseudo-elem(block);
+      @include line(#fff);
+      margin: 35px auto;
+
+      @include desktop-large-height {
+        margin: 65px auto 45px;
+      }
+
+    }
+  }
+  &__subtitle {
+    font-size: 32px;
+    @include large-mobile {
+      font-size: 52px;
+    }
+    @include desktop-large-height {
+      font-size: 72px;
+    }
+  }
+  &__btn {
+    height: 40px;
+    min-width: 160px;
+    border: 3px solid #fff;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,29 @@
+@import "vars";
+@import "mixin";
+
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  color: #333;
+  &__subtitle {
+    font-size: 24px;
+    line-height:  1.8em;
+    padding-bottom: 10px;
+  }
+  &__title {
+    text-transform: uppercase;
+    letter-spacing: 0;
+    &:after {
+      @include pseudo-elem(block);
+      @include line($secondary-color);
+      margin: 25px auto;
+      @include tablet {
+        margin: 35px auto 42px;
+      }
+    }
+  }
+  @include only-mobile{
+    padding: 0 15px;
+  }
+}

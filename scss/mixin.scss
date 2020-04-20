@@ -1,0 +1,54 @@
+@import  "vars";
+
+@mixin pseudo-elem ($display)  {
+  content: ' ';
+  display: $display
+}
+
+@mixin line ($color)  {
+  height: 3px;
+  width: 60px;
+  background-color: $color;
+}
+
+@mixin small-mobile {
+  @media (min-width: $sm-mobile) { @content; }
+}
+
+@mixin large-mobile {
+  @media (min-width: $lg-mobile) { @content; }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet) { @content; }
+}
+
+@mixin small-desktop {
+  @media (min-width: $sm-desktop) { @content; }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) { @content; }
+}
+
+@mixin desktop-large-height {
+  @media (min-height: 769px) and (min-width: $sm-desktop ){ @content; }
+}
+@mixin to-sm-desktop {
+  @media (max-width: 991px) { @content; }
+}
+@mixin to-desktop {
+  @media (max-width: 1199px) { @content; }
+}
+@mixin only-tablet {
+  @media (min-width: $tablet) and (max-width: 991px){ @content; }
+}
+@mixin only-mobile {
+  @media (max-width: 767px) { @content; }
+}
+@mixin only-small-mobile {
+  @media (max-width: 599px) { @content; }
+}
+@mixin only-large-mobile {
+  @media (min-width: $lg-mobile) and (max-width: 767px){ @content; }
+}

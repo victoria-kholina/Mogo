@@ -1,0 +1,136 @@
+@import "vars";
+@import "mixin";
+
+.menu {
+  display: none;
+  margin-top: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  @include only-mobile {
+    position: absolute;
+    width: 100%;
+    right: 0;
+  }
+  @include tablet {
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: flex-end;
+    -ms-flex-pack: end;
+  }
+  &__item {
+    margin: 0 15px;
+    border-bottom: 3px solid transparent;
+    @include only-mobile {
+      text-align: right;
+      padding: 5px 0;
+    }
+    @include small-desktop {
+      margin: 0 25px;
+    }
+    &:hover,
+    &:focus {
+      border-bottom: 3px solid #fce38a;;
+    }
+    &:hover a,
+    &:focus a {
+      color: #fce38a;;
+    }
+  }
+  &__icon {
+    margin-left: 15px;
+    @include small-desktop {
+      margin-left: 25px;
+    }
+    a {
+      line-height: 1em;
+      .icon-glass {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: flex-end;
+  -ms-flex-pack: end;
+  align-items: center;
+  -ms-flex-align: center;
+  @include tablet {
+    display: none;
+  }
+  &__icon {
+    display: inline-block;
+    padding: 0 15px;
+    &:last-child {
+      padding-right: 0;
+    }
+    .svg-icon {
+      height: 30px;
+      width: 30px;
+      fill: #fff;
+    }
+  }
+}
+
+.menu .menu__icon {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+
+
+.header-menu {
+  width: 100%;
+  text-transform: uppercase;
+  &__item {
+    opacity: 0.6;
+    position: relative;
+    padding: 10px 0;
+    font-size: 14px;
+    width: 100%;
+    display: inline-block;
+    @include tablet {
+      padding: 20px 0 15px;
+      font-size: 16px;
+    }
+    span {
+      font-size: 20px;
+      font-weight: bold;
+      display: block;
+      @include tablet {
+        font-size: 24px;
+        display: inherit;
+      }
+    }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 3px;
+      background-color: #fff;
+    }
+    &:before {
+      width: 25%;
+      left: 0;
+    }
+    &.active {
+      opacity: 1;
+    }
+    &.active:before {
+      background-color: #f38181;
+    }
+    &:after {
+      width: 75%;
+      right: 0;
+    }
+  }
+  .col {
+    @include only-mobile {
+      padding: 0 5px;
+    }
+  }
+}

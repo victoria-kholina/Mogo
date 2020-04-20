@@ -1,0 +1,84 @@
+@import "vars";
+@import "mixin";
+
+.reviews {
+  background: #999  url('../images/nature-grey-bg.jpg') no-repeat;
+  background-size: cover;
+  padding: 40px 0;
+  @include tablet {
+    padding: 70px 0 40px;
+  }
+  @include small-desktop {
+    padding: 100px 0 70px;
+  }
+  &-container {
+    @include large-mobile {
+      padding-top: 40px;
+    }
+  }
+  &__row {
+    @include large-mobile {
+      padding-bottom: 60px;
+    }
+    .row {
+      padding: 0 10px;
+      @include desktop {
+        padding: 0 40px;
+      }
+    }
+  }
+  &__text {
+    @include only-small-mobile {
+      text-align: center;
+    }
+    @include large-mobile {
+      padding: 5px 0 0 20px;
+    }
+    @include desktop {
+      padding: 15px 0 0 10px;
+    }
+    h5 {
+      padding-bottom: 5px;
+      @include large-mobile {
+        padding-bottom: 10px;
+      }
+    }
+    h6 {
+      font-weight: 300;
+      font-style: italic;
+    }
+    p {
+      @include large-mobile {
+        max-width: 370px;
+      }
+      &:before {
+        @include pseudo-elem(block);
+        @include line($secondary-color);
+        margin: 5px auto 15px;
+        @include large-mobile {
+          margin: 10px 0;
+        }
+        @include small-desktop {
+          margin: 10px 0 20px;
+        }
+      }
+    }
+
+  }
+  .img-box {
+    width: 90px;
+    height: 90px;
+    @include only-small-mobile {
+      margin: 30px auto 20px;
+    }
+    @include small-desktop {
+      width: 115px;
+      height: 115px;
+    }
+  }
+  .col {
+    @include only-large-mobile {
+      flex-basis: 0;
+    }
+  }
+}

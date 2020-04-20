@@ -1,0 +1,40 @@
+@import "vars";
+@import "mixin";
+
+.design {
+  background: #999  url(../images/nature-grey-bg.jpg) no-repeat;
+  background-size: cover;
+  .container {
+    @include tablet {
+      height: 850px;
+    }
+    @include only-mobile {
+      padding-top: 50px;
+    }
+  }
+  &__tablet {
+    margin-top: 5px;
+    @include only-mobile {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+  &__wrapper {
+    position: relative;
+    max-width: 800px;
+    height: 100%;
+    margin: 0 auto;
+  }
+  &__phone {
+    background-color: #fff;
+    height: 90px;
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      @include only-mobile {
+        width: 200px;
+      }
+    }
+  }
+}

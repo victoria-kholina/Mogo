@@ -1,0 +1,55 @@
+@import "vars";
+@import "mixin";
+
+.portfolio {
+  padding-top: 40px ;
+  @include tablet {
+    padding-top: 70px ;
+  }
+  @include small-desktop {
+    padding-top: 100px ;
+  }
+  &-container {
+    display: grid;
+    height: 800px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding-top: 50px;
+    @include large-mobile {
+      height: 1200px;
+    }
+    @include tablet {
+      padding-top: 75px;
+    }
+    @include small-desktop {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      height: 580px;
+      padding-top: 105px;
+    }
+    @include desktop {
+      height: 780px;
+    }
+  }
+  &__item {
+    &.joined {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      @include small-desktop {
+        grid-column: 3;
+      }
+    }
+    .icon {
+      margin-top: 10px;
+    }
+    &:nth-child(7) {
+      -ms-grid-column: 4;
+    }
+  }
+  .img-box {
+    height: 100%;
+    h5 {
+      text-align: center;
+    }
+  }
+}

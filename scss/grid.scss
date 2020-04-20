@@ -1,0 +1,168 @@
+/*** Grid  ***/
+@import "mixin.scss";
+
+@mixin tablet {
+  @media (min-width: 768px) { @content; }
+}
+
+@mixin small-desktop {
+  @media (min-width: 992px) { @content; }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) { @content; }
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+
+  @include tablet {
+      max-width: 720px;
+  }
+  @include small-desktop {
+      max-width: 960px;
+  }
+  @include desktop {
+      max-width: 1200px;
+  }
+}
+
+.column, .row {
+  display: flex;
+  display: -ms-flexbox; /* ie */
+  display: -webkit-flex; /* Safari */
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+}
+.column {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+  -ms-flex-align: center;
+  justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+}
+
+.items-center-end {
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.gaps {
+  @include tablet {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .col {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+/*** Mobile  ***/
+.col {
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.col-10 {
+  max-width: 83%;
+}
+.col-9 {
+  max-width:  75%;
+}
+.col-8 {
+   width: 67%;
+ }
+.col-7 {
+  width: 58%;
+}
+.col-6 {
+  max-width: 50%;
+}
+.col-5 {
+  width: 42%;
+}
+.col-4 {
+  max-width: 33%;
+}
+.col-3 {
+  max-width: 25%;
+}
+.col-2 {
+  max-width: 17%;
+}
+
+
+/*** Tablet  ***/
+
+@include tablet {
+  .col {
+    flex-basis: 0;
+  }
+  .equal-columns-5 .col {
+    max-width: 20%;
+  }
+  .equal-columns-4 .col {
+    max-width: 25%;
+  }
+  .equal-columns-3 .col {
+    max-width: 33.3333%;
+  }
+  .equal-columns-2 .col {
+    max-width: 50%;
+  }
+}
+@include large-mobile {
+  .footer-col-5 {
+    flex-basis: auto;
+  }
+  .footer-col-4,
+  .footer-col-3 {
+    flex-basis: 0;
+    max-width: 50%;
+  }
+}
+
+@include small-desktop {
+  .footer-col-5 {
+    max-width: 480px;
+    flex-basis: 0;
+  }
+  .footer-col-4 {
+    max-width: 390px;
+  }
+  .footer-col-3 {
+    max-width: 270px;
+  }
+}
+
+@include only-tablet {
+  .col-sm-3 {
+    max-width: 25%;
+  }
+  .col-sm-9 {
+    max-width: 75%;
+  }
+  .footer-col-5 {
+    flex-basis: auto;
+  }
+  .footer-col-4,
+  .footer-col-3 {
+    max-width: 50%;
+  }
+}
+
+@include only-small-mobile {
+  .col {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,78 @@
+@import "vars";
+@import "mixin";
+
+.blog {
+  padding: 40px 0 10px;
+  @include tablet {
+    padding: 65px 0 80px;
+  }
+  @include small-desktop {
+    padding: 95px 0 110px;
+  }
+  &-container {
+    padding-top: 10px;
+    margin: 0 auto;
+  }
+  .col {
+    max-width: 380px;
+    @include only-mobile {
+      margin: 0 auto;
+    }
+  }
+  .img-box {
+    height: 240px;
+  }
+  span {
+    font-weight: 300;
+    font-style: italic;
+  }
+  &__date {
+    position: absolute;
+    margin-top: -80px;
+    margin-left: -10px;
+    z-index: 10;
+    width: 60px;
+    height: 70px;
+    background-color: $accent-color;
+    color: #fff;
+  }
+  &__text {
+    padding: 15px 0 10px;
+    h5 {
+      padding-bottom: 10px;
+      line-height: 1.2em;
+    }
+  }
+  .col {
+    @include  only-mobile {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.blog-item {
+  padding-bottom: 30px;
+  h6 {
+    max-width: 400px;
+    padding-top: 20px;
+    font: 600 12px/1.5 'Montserrat', sans-serif;
+    text-transform: uppercase;
+  }
+  span {
+    color: #999;
+    font-size: 13px;
+    font-weight: 300;
+    font-style: italic;;
+  }
+  .img-box {
+    width: 120px;
+    height: 80px;
+    float: left;
+    margin-right: 20px;
+  }
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

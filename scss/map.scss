@@ -1,0 +1,18 @@
+@import "vars";
+@import "mixin";
+
+.map {
+  height: 200px;
+  background: #999 url("../images/map.jpg") no-repeat;
+  background-size: cover;
+  &:after {
+    @include pseudo-elem(block);
+    @include line($secondary-color);
+  }
+  &__link {
+    font: bold 24px/1 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: $secondary-color;
+    padding: 20px 0;
+  }
+}

@@ -1,0 +1,161 @@
+@import "vars";
+@import "mixin";
+
+.grey-bg {
+  background-color: #f8f8f8;
+}
+
+.carousel {
+  &-wrap {
+    position: relative;
+    &:before,
+    &:after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      top: 50%;
+      margin-top: -6px;
+      border-top: 3px solid #ccc;
+      border-left: 3px solid #ccc;
+    }
+    &:before {
+      left: 10px;
+      transform: rotate(-45deg);
+      @include small-mobile {
+        left: 20px;
+      }
+    }
+    &:after {
+      right: 15px;
+      transform: rotate(135deg);
+      @include small-mobile {
+        right: 25px;
+      }
+    }
+  }
+  &-item {
+    align-items: center;
+    -ms-flex-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    min-height: 200px;
+    @include only-small-mobile {
+      padding: 50px 0;
+      text-align: center;
+    }
+    @include tablet {
+      height: 290px;
+    }
+    @include small-desktop {
+      max-width: 860px;
+    }
+    &__desc {
+      font-style: italic;
+      font-size: 18px;
+      padding-top: 10px;
+      @include only-small-mobile {
+        padding-right: 30px;
+      }
+      @include small-desktop {
+        font-size: 24px;
+      }
+      p {
+        line-height: 1.5em;
+        padding-bottom: 10px;
+        @include only-mobile {
+          padding: 0 20px;
+        }
+      }
+      h3 {
+        &:before {
+          @include large-mobile {
+            @include pseudo-elem(inline-block);
+            @include line($secondary-color);
+            margin: 0 10px 6px 0;
+          }
+        }
+        &:after {
+          @include only-small-mobile {
+            @include pseudo-elem(block);
+            @include line($secondary-color);
+            margin: 10px auto 0;
+          }
+        }
+        @include only-small-mobile {
+          padding-top: 20px;
+        }
+      }
+    }
+    .col {
+      @include only-large-mobile {
+        flex-basis: 0;
+      }
+    }
+    .img-box {
+      @include only-small-mobile {
+        margin: 0 auto;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .bordered {
+    width: 110px;
+    height: 110px;
+
+    @include tablet {
+      width: 145px;
+      height: 145px;
+    }
+    @include small-desktop {
+      margin-left: 20px;
+    }
+  }
+  .circle {
+    width: 155px;
+    height: 155px;
+    @include small-desktop {
+      width: 215px;
+      height: 215px;
+    }
+  }
+  &.grey-bg .carousel-item {
+    @include desktop {
+      max-width: 1010px;
+    }
+  }
+  &.grey-bg .carousel-item__desc {
+    padding-left: 30px;
+    @include tablet {
+      padding-left: 20px;
+    }
+    @include small-desktop {
+      padding-left: 45px;
+    }
+  }
+}
+
+.carousel-reviews {
+  min-height: 340px;
+  align-items:  center;
+  -ms-flex-align: center;
+  @include small-desktop {
+    height: 440px;
+  }
+
+  .carousel-item {
+    @include desktop {
+      max-width: 1035px;
+    }
+  }
+  .carousel-wrap {
+    @include small-desktop {
+      margin-bottom: 40px;
+    }
+  }
+  .carousel-item__desc {
+    @include to-desktop {
+      padding-left: 30px;
+    }
+  }
+}

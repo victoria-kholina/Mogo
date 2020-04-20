@@ -1,0 +1,39 @@
+@import "vars";
+@import "mixin";
+
+.footer {
+  padding: 40px 0;
+  @include small-desktop {
+    padding-top: 70px;
+  }
+  &__logo {
+    color: #ccc;
+    font-size: 46px;
+  }
+  &__desc {
+    padding: 35px 0 40px;
+  }
+  h5 {
+    padding: 15px 0 35px;
+  }
+  .top-line {
+    p {
+      padding-top: 2px;
+    }
+    a {
+      height: 16px;
+    }
+  }
+
+}
+
+.copyright {
+  border-top: 1px solid #e5e5e5;
+  height: 60px;
+  h6 {
+    font: bold 14px/1 'Montserrat', sans-serif;
+  }
+  span {
+    color: $secondary-color
+  }
+}

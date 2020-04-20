@@ -1,0 +1,29 @@
+@import "vars";
+@import "mixin";
+
+.what-we-do {
+  margin: 10px 0 50px;
+  @include tablet {
+    margin-bottom: 90px;
+  }
+  @include small-desktop {
+    margin-bottom: 110px;
+  }
+  .row {
+    margin-top: 50px;
+    @include small-desktop {
+      margin-top: 90px;
+    }
+    .col {
+      @include large-mobile {
+        flex-basis: 0;
+      }
+    }
+  }
+  .img-box {
+    height: 380px;
+    @include tablet {
+      margin-right: 30px;
+    }
+  }
+}
