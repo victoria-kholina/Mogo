@@ -22,7 +22,22 @@
   0% { height: 0 }
   100% { height: $height-accordion-item;  }
 }
+@keyframes hide-slide {
+  0% { left: 0; }
+  100% { left: -1000px }
+}
 
+@keyframes show-slide {
+  0% { left: 1000px ; }
+  100% { left: 0; }
+}
+.show-slide {
+  animation-name: show-slide;
+}
+.hide-slide {
+  animation-name: hide-slide;
+  animation-duration: 600ms;
+}
 .animation {
  animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;

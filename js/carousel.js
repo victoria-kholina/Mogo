@@ -1,8 +1,13 @@
 let carouselBodies = document.getElementsByClassName("carousel-body");
 
 let touchStart,
-    touchEnd,
-    slidePos;
+    touchEnd;
+
+const animation = {
+    hide: "hide-slide",
+    show: "show-slide",
+    speedHide: 600
+}
 
 for (let carouselBody of carouselBodies) {
     let arrowPrev = carouselBody.closest(".carousel").querySelector(".arrow-prev");
@@ -11,8 +16,11 @@ for (let carouselBody of carouselBodies) {
     let startSlide = carouselBody.firstElementChild;
     startSlide.classList.add("active");
     carouselBody.insertAdjacentElement("afterbegin", carouselBody.lastElementChild);
-    slidePos = startSlide.offsetLeft;
-    carouselBody.scrollLeft = slidePos;
+    carouselBody.scrollLeft = startSlide.offsetLeft;
+
+    for(let child of carouselBody.children) {
+        child.classList.add("animation")
+    }
 
     arrowNext.onclick = function (event) {
        scrollCarousel(carouselBody, carouselWidth,  "next");
@@ -39,20 +47,25 @@ for (let carouselBody of carouselBodies) {
 function scrollCarousel(carousel, width,  direction) {
     let currSlide = carousel.querySelector(".active"),
          firstSlide= carousel.firstElementChild,
-         lastSlide = carousel.lastElementChild;
+         lastSlide = carousel.lastElementChild,
+        nextSlide = currSlide.nextElementSibling,
+        prevSlide = currSlide.previousElementSibling;
+
+    currSlide.classList.remove("active");
+    currSlide.classList.remove(animation.show)
 
     if(direction === "next") {
-        firstSlide.style.transform = `translate(${width}px)`;
-        slidePos += currSlide.offsetWidth;
-        currSlide.classList.remove("active");
+        currSlide.classList.add(animation.hide)
 
-        // scrollToPosition(carousel, slidePos).then(res=> {
-        //     let newLastSlide = carousel.insertAdjacentElement("beforeend", firstSlide);
-        //     newLastSlide.style.removeProperty('transform');
-        //     newLastSlide.classList.add("active");
-        // });
+        setTimeout(()=>{
+            currSlide.classList.remove(animation.hide)
+            nextSlide.classList.add("active",animation.show);
+            carousel.insertAdjacentElement("beforeend", firstSlide);
+        }, animation.speedHide)
+
     } else {
-
+        prevSlide.classList.add("active");
+        carousel.insertAdjacentElement("afterbegin", lastSlide);
     }
 }
 
