@@ -1,5 +1,6 @@
 @import "vars";
 @import "mixin";
+@import "animation";
 
 .menu {
   display: none;
@@ -7,9 +8,10 @@
   font-size: 14px;
   text-transform: uppercase;
   @include only-mobile {
+    justify-content: flex-end;
     position: absolute;
-    width: 100%;
-    right: 0;
+    width: 100px;
+    right: - 100px;
   }
   @include tablet {
     display: flex;
@@ -21,7 +23,6 @@
     margin: 0 15px;
     border-bottom: 3px solid transparent;
     @include only-mobile {
-      text-align: right;
       padding: 5px 0;
     }
     @include small-desktop {
@@ -47,6 +48,17 @@
         margin-left: 15px;
       }
     }
+  }
+  &.show-from-right {
+    animation-name:  show-from-right ;
+  }
+  &.show-from-right,
+  &.hide-to-right {
+    display: flex;
+
+  }
+  &.hide-to-right {
+    animation-name:  hide-to-right;
   }
 }
 

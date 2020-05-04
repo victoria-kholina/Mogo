@@ -34,8 +34,8 @@ function style() {
 
 function watch() {
     browserSync.init({
-        proxy: "http://perfect.project",
-        host: 'perfect.project',
+        proxy: "http://mogo",
+        host: 'mogo',
         open: "external",
         notify: false,
         browser: "chrome"

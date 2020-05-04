@@ -21,13 +21,13 @@
                     <ul class="mobile-menu">
                         <li class="mobile-menu__icon"><a href="#"><span class="icon icon-cart"></span></a></li>
                         <li class="mobile-menu__icon "><a href="#"><span class="icon icon-glass"></span></a></li>
-                        <li class="mobile-menu__icon">
+                        <li class="mobile-menu__icon" id="mobile-menu-icon">
                             <svg class="svg-icon">
-                                <use xlink:href="#menu"></use>
+                                <use xlink:href="#menu-mobile"></use>
                             </svg>
                         </li>
                     </ul>
-                    <ul class="menu row">
+                    <ul class="menu row animation" id="menu" >
                         <li class="menu__item"><a href="#">About</a></li>
                         <li class="menu__item"><a href="#">Service</a></li>
                         <li class="menu__item"><a href="#">Work</a></li>
@@ -223,7 +223,7 @@
                 <div class="col">
                     <div class="accordion active">
                         <button class="accordion__btn"><span class="icon icon-picture"></span> Photography</button>
-                        <div class="accordion-text">
+                        <div class="accordion-text animation">
                            <div class="accordion-text__wrap">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -240,7 +240,7 @@
 
                     <div class="accordion">
                         <button class="accordion__btn"><span class="icon icon-equalizer"></span>Creativity</button>
-                        <div class="accordion-text">
+                        <div class="accordion-text animation">
                             <div class="accordion-text__wrap">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -257,7 +257,7 @@
 
                     <div class="accordion">
                         <button class="accordion__btn"><span class="icon icon-bullseye"></span>Web-design</button>
-                        <div class="accordion-text">
+                        <div class="accordion-text animation">
                             <div class="accordion-text__wrap">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -277,10 +277,24 @@
         </div>
     </section>
 
-    <section class="carousel grey-bg" >
-        <div class="container">
-            <div class="carousel-wrap">
+    <section class="carousel-section grey-bg" >
 
+        <div class="container carousel">
+            <span class=" carousel__arrow arrow-prev"></span>
+            <div class="carousel-body" id="carousel-body">
+                <div class="carousel-item row">
+                    <div class="row">
+                        <div class="col col-2 col-sm-3">
+                            <div class="img-box bordered">
+                                <img src="images/dummy.png" class="img-box__image" alt="">
+                            </div>
+                        </div>
+                        <div class="carousel-item__desc col col-10 col-sm-9">
+                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                            <h3>1 Jon Doe</h3>
+                        </div>
+                    </div>
+                </div>
                 <div class="carousel-item row ">
                     <div class="col col-2 col-sm-3">
                         <div class="img-box bordered">
@@ -289,12 +303,24 @@
                     </div>
                     <div class="carousel-item__desc col col-10 col-sm-9">
                         <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-                        <h3>Jon Doe</h3>
+                        <h3>2 Jon Doe</h3>
                     </div>
                 </div>
-
+                <div class="carousel-item row ">
+                    <div class="col col-2 col-sm-3">
+                        <div class="img-box bordered">
+                            <img src="images/dummy.png" class="img-box__image" alt="">
+                        </div>
+                    </div>
+                    <div class="carousel-item__desc col col-10 col-sm-9">
+                        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                        <h3>3 Jon Doe</h3>
+                    </div>
+                </div>
             </div>
+            <span class="carousel__arrow arrow-next"></span>
         </div>
+
     </section>
 
     <section class="team">
@@ -864,13 +890,13 @@
         <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.113 430.114" id="facebook-letter-logo">
             <path d="M158.081 83.3v59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805s5.601-34.721 8.316-72.685H247.54V92.74c0-7.4 9.717-17.354 19.321-17.354h48.557V.001h-66.021C155.878-.004 158.081 72.48 158.081 83.3z"></path>
         </symbol>
-        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="menu">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="menu-mobile">
             <path d="M501.333,96H10.667C4.779,96,0,100.779,0,106.667s4.779,10.667,10.667,10.667h490.667c5.888,0,10.667-4.779,10.667-10.667    S507.221,96,501.333,96z"/>
             <path d="m501.33 245.33h-490.67c-5.888 0-10.667 4.779-10.667 10.667s4.779 10.667 10.667 10.667h490.67c5.888 0 10.667-4.779 10.667-10.667s-4.78-10.667-10.668-10.667z"/>
             <path d="m501.33 394.67h-490.67c-5.888 0-10.667 4.778-10.667 10.666s4.779 10.667 10.667 10.667h490.67c5.888 0 10.667-4.779 10.667-10.667-1e-3 -5.888-4.78-10.666-10.668-10.666z"/>
         </symbol>
     </svg>
-
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
+<script src="js/carousel.js"></script>
 </body>
 </html>

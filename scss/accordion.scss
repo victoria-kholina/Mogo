@@ -1,21 +1,26 @@
 @import "vars";
 @import "mixin";
+@import "animation";
 
 .accordion {
   padding-bottom: 10px;
   &-text {
-    padding: 13px 20px 25px 20px;
+    height: $height-accordion-item;
     font-size: 15px;
     color: #999;
     font-style: italic;
     border: 1px solid #e5e5e5;
+    position: relative;
+    top: -1px;
     border-top: none;
     display: none;
+    overflow: hidden;
     @include tablet {
       padding-right:  25px;
     }
     &__wrap {
       height: 140px;
+     margin: 13px 20px 25px 20px;
       overflow-y:  scroll;
       padding-right:  25px;
       scrollbar-face-color: $accent-color;
@@ -66,7 +71,7 @@
       margin-top: 3px;
       border-top: 3px solid #ccc;
       border-left: 3px solid #ccc;
-      transform: rotate(45deg);
+      transform: rotate(-135deg);
       @include tablet {
         right: 23px;
       }
@@ -76,6 +81,13 @@
     display: block;
   }
   &.active .accordion__btn:after{
-    transform: rotate(-135deg);
+    transform: rotate(45deg);
+  }
+  .close-accordion {
+    display: block;
+    animation-name: close-accordion;
+  }
+   .open-accordion {
+    animation-name: open-accordion;
   }
 }

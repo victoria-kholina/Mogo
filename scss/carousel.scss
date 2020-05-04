@@ -4,51 +4,34 @@
 .grey-bg {
   background-color: #f8f8f8;
 }
-
 .carousel {
-  &-wrap {
-    position: relative;
-    &:before,
-    &:after {
-      content: "";
-      width: 12px;
-      height: 12px;
-      position: absolute;
-      top: 50%;
-      margin-top: -6px;
-      border-top: 3px solid #ccc;
-      border-left: 3px solid #ccc;
-    }
-    &:before {
-      left: 10px;
-      transform: rotate(-45deg);
-      @include small-mobile {
-        left: 20px;
-      }
-    }
-    &:after {
-      right: 15px;
-      transform: rotate(135deg);
-      @include small-mobile {
-        right: 25px;
-      }
-    }
-  }
-  &-item {
+  position: relative;
+  &-body {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    display: flex;
     align-items: center;
-    -ms-flex-align: center;
-    max-width: 600px;
     margin: 0 auto;
     min-height: 200px;
-    @include only-small-mobile {
-      padding: 50px 0;
-      text-align: center;
-    }
+    max-width: 600px;
+    position: relative;
     @include tablet {
       height: 290px;
     }
     @include small-desktop {
       max-width: 860px;
+    }
+  }
+
+  &-item {
+    align-items: center;
+    -ms-flex-align: center;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;;
+    @include only-small-mobile {
+      padding: 50px 0;
+      text-align: center;
     }
     &__desc {
       font-style: italic;
@@ -60,6 +43,7 @@
       @include small-desktop {
         font-size: 24px;
       }
+
       p {
         line-height: 1.5em;
         padding-bottom: 10px;
@@ -67,6 +51,7 @@
           padding: 0 20px;
         }
       }
+
       h3 {
         &:before {
           @include large-mobile {
@@ -75,6 +60,7 @@
             margin: 0 10px 6px 0;
           }
         }
+
         &:after {
           @include only-small-mobile {
             @include pseudo-elem(block);
@@ -82,16 +68,19 @@
             margin: 10px auto 0;
           }
         }
+
         @include only-small-mobile {
           padding-top: 20px;
         }
       }
     }
+
     .col {
       @include only-large-mobile {
         flex-basis: 0;
       }
     }
+
     .img-box {
       @include only-small-mobile {
         margin: 0 auto;
@@ -99,6 +88,7 @@
       }
     }
   }
+
   .bordered {
     width: 110px;
     height: 110px;
@@ -111,6 +101,7 @@
       margin-left: 20px;
     }
   }
+
   .circle {
     width: 155px;
     height: 155px;
@@ -119,7 +110,36 @@
       height: 215px;
     }
   }
-  &.grey-bg .carousel-item {
+
+  .carousel__arrow {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    border-top: 3px solid #ccc;
+    border-left: 3px solid #ccc;
+    cursor: pointer;
+  }
+  .arrow-prev {
+    left: 10px;
+    transform: rotate(-45deg);
+    @include small-mobile {
+      left: 20px;
+    }
+  }
+  .arrow-next {
+    right: 15px;
+    transform: rotate(135deg);
+    @include small-mobile {
+      right: 25px;
+
+    }
+  }
+}
+
+.carousel-section {
+  &.grey-bg .carousel-body {
     @include desktop {
       max-width: 1010px;
     }
@@ -142,15 +162,12 @@
   @include small-desktop {
     height: 440px;
   }
-
-  .carousel-item {
-    @include desktop {
-      max-width: 1035px;
-    }
-  }
-  .carousel-wrap {
+  .carousel-body {
     @include small-desktop {
       margin-bottom: 40px;
+    }
+    @include desktop {
+      max-width: 1035px;
     }
   }
   .carousel-item__desc {

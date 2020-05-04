@@ -1,0 +1,30 @@
+@import "vars";
+@keyframes show-from-right {
+  0% { right: -100px; }
+  50% { right: 30px; }
+  100% { right: 0; }
+}
+@keyframes hide-to-right {
+  0% { right: 0; }
+  25% { right: 30px; }
+  50% {  right: -100px; }
+  100% { display: none;  }
+}
+
+@keyframes close-accordion {
+  0% { height: $height-accordion-item; }
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes open-accordion {
+  0% { height: 0 }
+  100% { height: $height-accordion-item;  }
+}
+
+.animation {
+ animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
