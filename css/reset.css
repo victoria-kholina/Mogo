@@ -70,10 +70,10 @@ a:hover,
 a:active {
     text-decoration: none;
 }
-
-:active, :hover, :focus {
-    outline: 0;
-    outline-offset: 0;
+button:active,
+button:hover,
+button:focus {
+    outline: none;
 }
 
 select,

@@ -2,11 +2,19 @@
 @import "mixin";
 
 .img-box-container {
-  background-color: #95e1d3;
-  margin: 0 auto;
-  max-width: 380px;
+    margin: 0 auto;
+    max-width: 380px;
 }
 
+.img-box-animated {
+  background-color: #95e1d3;
+  .img-box {
+    transition: 0.5s ease-in-out;
+    &:hover {
+      transform: translate(-10px, -10px);
+    }
+  }
+}
 .circle {
   border-radius:  50%;
 }
@@ -17,12 +25,6 @@
 .img-box {
   position: relative;
   overflow: hidden;
-  &.animated {
-    transition: 0.5s ease-in-out;
-    &:hover {
-      transform: translate(-10px, -10px);
-    }
-  }
   &__image,
   &__heading {
     position: absolute;

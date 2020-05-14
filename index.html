@@ -20,7 +20,10 @@
                 <div class="col col-10">
                     <ul class="mobile-menu">
                         <li class="mobile-menu__icon"><a href="#"><span class="icon icon-cart"></span></a></li>
-                        <li class="mobile-menu__icon "><a href="#"><span class="icon icon-glass"></span></a></li>
+                        <li class="mobile-menu__icon search">
+                            <input type="search" class="search__input search-input animation" >
+                            <span class="icon icon-glass search-icon" ></span>
+                        </li>
                         <li class="mobile-menu__icon" id="mobile-menu-icon">
                             <svg class="svg-icon">
                                 <use xlink:href="#menu-mobile"></use>
@@ -34,7 +37,10 @@
                         <li class="menu__item"><a href="#">Blog</a></li>
                         <li class="menu__item"><a href="#">Contact</a></li>
                         <li class="menu__icon"><a href="#"><span class="icon icon-cart"></span></a></li>
-                        <li class="menu__icon"><a href="#"><span class="icon icon-glass"></span></a></li>
+                        <li class="menu__icon search">
+                            <input type="search" class="search__input search-input animation" >
+                            <span class="icon icon-glass search-icon" ></span>
+                        </li>
                     </ul>
                 </div>
             </header>
@@ -63,7 +69,7 @@
     </div>
 
     <section class="about">
-        <div class="container">
+        <div class="container mobile-wrap">
             <div class="content">
                 <h3 class="content__subtitle">What we do</h3>
                 <h2 class="content__title">Story about us</h2>
@@ -71,9 +77,9 @@
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             </div>
             <div class="row equal-columns-3 gaps">
-                <div class="col">
-                    <div class="img-box-container">
-                        <div class="img-box animated">
+                <div class="col col-mobile-12">
+                    <div class="img-box-container img-box-animated">
+                        <div class="img-box">
                             <div class="img-box__heading column items-center">
                                 <span class="icon icon-users"></span>
                                 <h4>Super team</h4>
@@ -82,9 +88,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="img-box-container">
-                        <div class="img-box animated">
+                <div class="col col-mobile-12">
+                    <div class="img-box-container img-box-animated">
+                        <div class="img-box">
                             <div class="img-box__heading column items-center">
                                 <span class="icon icon-picture-white"></span>
                                 <h4>Creativity</h4>
@@ -94,8 +100,8 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="img-box-container">
-                        <div class="img-box animated">
+                    <div class="img-box-container img-box-animated">
+                        <div class="img-box">
                             <div class="img-box__heading column items-center">
                                 <span class="icon icon-white-graph"></span>
                                 <h4>Result orientation</h4>
@@ -110,23 +116,23 @@
 
     <section class="achievements">
         <div class="container row equal-columns-5">
-                <div class="col column items-center">
+                <div class="col col-mobile-12 column items-center">
                     <h2>42</h2>
                     <h5>Web Design Projects</h5>
                 </div>
-                <div class="col column items-center">
+                <div class="col  col-mobile-12  column items-center">
                     <h2>123</h2>
                     <h5>happy client</h5>
                 </div>
-                <div class="col column items-center">
+                <div class="col col-mobile-12  column items-center">
                     <h2>15</h2>
                     <h5>award winner</h5>
                 </div>
-                <div class="col  column items-center">
+                <div class="col col-mobile-12 column items-center">
                     <h2>99</h2>
                     <h5>cup of coffee</h5>
                 </div>
-                <div class="col  column items-center">
+                <div class="col  col-mobile-12  column items-center">
                     <h2>24</h2>
                     <h5>members</h5>
                 </div>
@@ -134,7 +140,7 @@
     </section>
 
     <section class="service">
-        <div class="container">
+        <div class="container mobile-wrap">
             <div class="content">
                 <h3 class="content__subtitle">We work with</h3>
                 <h2 class="content__title">Amazing Services</h2>
@@ -205,7 +211,7 @@
     </section>
 
     <section class="what-we-do">
-        <div class="container">
+        <div class="container mobile-wrap">
             <div class="content">
                 <h3 class="content__subtitle">Service</h3>
                 <h2 class="content__title">What we do</h2>
@@ -214,13 +220,13 @@
             </div>
             <div class="row equal-columns-2">
 
-                <div class="col">
+                <div class="col col-tablet-12">
                     <div class="img-box">
                         <img src="images/photographer.jpg" class="img-box__image" alt="photographer">
                     </div>
                 </div>
 
-                <div class="col">
+                <div class="col col-tablet-12">
                     <div class="accordion active">
                         <button class="accordion__btn"><span class="icon icon-picture"></span> Photography</button>
                         <div class="accordion-text animation">
@@ -277,65 +283,56 @@
         </div>
     </section>
 
-    <section class="carousel-section grey-bg" >
+    <section class="carousel-section row grey-bg" >
 
         <div class="container carousel">
-            <span class=" carousel__arrow arrow-prev"></span>
-            <div class="carousel-body" id="carousel-body">
-                <div class="carousel-item row">
-                    <div class="row">
-                        <div class="col col-2 col-sm-3">
+            <div class="carousel-wrapper" >
+                <div class="carousel-track">
+                    <div class="carousel-item row" >
+                        <div class="row">
+                            <div class="col col-xs-12 col-sm-2 col-3">
+                                <div class="img-box bordered">
+                                    <img src="images/dummy.png" class="img-box__image" alt="">
+                                </div>
+                            </div>
+                            <div class="carousel-item__desc col col-xs-12 col-sm-10 col-9">
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                                <h3>Jon Doe</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item row" >
+                        <div class="col col-xs-12 col-sm-2 col-3">
                             <div class="img-box bordered">
                                 <img src="images/dummy.png" class="img-box__image" alt="">
                             </div>
                         </div>
-                        <div class="carousel-item__desc col col-10 col-sm-9">
+                        <div class="carousel-item__desc col col-xs-12 col-sm-10 col-9">
                             <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-                            <h3>1 Jon Doe</h3>
+                            <h3>Jon Doe</h3>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item row ">
-                    <div class="col col-2 col-sm-3">
-                        <div class="img-box bordered">
-                            <img src="images/dummy.png" class="img-box__image" alt="">
+                    <div class="carousel-item row" >
+                        <div class="col  col-xs-12 col-sm-2 col-3">
+                            <div class="img-box bordered">
+                                <img src="images/dummy.png" class="img-box__image" alt="">
+                            </div>
                         </div>
-                    </div>
-                    <div class="carousel-item__desc col col-10 col-sm-9">
-                        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-                        <h3>2 Jon Doe</h3>
-                    </div>
-                </div>
-                <div class="carousel-item row ">
-                    <div class="col col-2 col-sm-3">
-                        <div class="img-box bordered">
-                            <img src="images/dummy.png" class="img-box__image" alt="">
+                        <div class="carousel-item__desc col col-xs-12 col-sm-10 col-9">
+                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                            <h3>Jon Doe</h3>
                         </div>
-                    </div>
-                    <div class="carousel-item__desc col col-10 col-sm-9">
-                        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-                        <h3>3 Jon Doe</h3>
-                    </div>
-                </div>
-                <div class="carousel-item row ">
-                    <div class="col col-2 col-sm-3">
-                        <div class="img-box bordered">
-                            <img src="images/dummy.png" class="img-box__image" alt="">
-                        </div>
-                    </div>
-                    <div class="carousel-item__desc col col-10 col-sm-9">
-                        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-                        <h3>4 Jon Doe</h3>
                     </div>
                 </div>
             </div>
+            <span class=" carousel__arrow arrow-prev"></span>
             <span class="carousel__arrow arrow-next"></span>
         </div>
 
     </section>
 
     <section class="team">
-        <div class="container">
+        <div class="container mobile-wrap">
             <div class="content">
                 <h3 class="content__subtitle">Who we are</h3>
                 <h2 class="content__title">Meet our team</h2>
@@ -344,10 +341,10 @@
             </div>
 
             <div class="row equal-columns-3 gaps">
-                <div class="col">
+                <div class="col col-mobile-12">
 
-                    <div class="img-box-container">
-                        <div class="img-box animated">
+                    <div class="img-box-container img-box-animated">
+                        <div class="img-box">
                             <div class="img-box__heading row items-center">
 
                                 <a href="#">
@@ -383,10 +380,10 @@
 
                 </div>
 
-                <div class="col">
+                <div class="col  col-mobile-12" >
 
-                    <div class="img-box-container">
-                        <div class="img-box animated">
+                    <div class="img-box-container img-box-animated">
+                        <div class="img-box">
                             <div class="img-box__heading row items-center">
 
                                 <a href="#">
@@ -422,10 +419,10 @@
 
                 </div>
 
-                <div class="col">
+                <div class="col col-mobile-12">
 
-                    <div class="img-box-container">
-                        <div class="img-box animated">
+                    <div class="img-box-container img-box-animated">
+                        <div class="img-box">
                             <div class="img-box__heading row items-center">
 
                                 <a href="#">
@@ -467,18 +464,18 @@
     <section class="logos grey-bg row" >
         <div class="container">
             <div class="logos-items row space-between">
-                <img src="images/design.png" alt="logo">
                 <img src="images/hipster.png" alt="logor">
-                <img src="images/hipster-barbershop.png" alt="logp">
-                <img src="images/barbershop.png" alt="logo">
                 <img src="images/abcd.png" alt="logod">
+                <img src="images/design.png" alt="logo">
+                <img src="images/barbershop.png" alt="logo">
+                <img src="images/hipster-barbershop.png" alt="logp">
                 <img src="images/studio.png" alt="logo">
             </div>
         </div>
     </section>
 
     <section class="portfolio">
-            <div class="content">
+            <div class="content container mobile-wrap">
                 <h3 class="content__subtitle">What we do</h3>
                 <h2 class="content__title">Some of our work</h2>
                 <p class="content__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -572,23 +569,36 @@
             </div>
     </section>
 
-    <section class="carousel carousel-reviews row" >
-        <div class="container">
-            <div class="carousel-wrap">
-
-                <div class="carousel-item row ">
-                    <div class="col col-3">
+    <section class="carousel-reviews row" >
+        <div class="container carousel">
+            <div class="carousel-wrapper">
+                <div class="carousel-track">
+                    <div class="carousel-item row ">
+                    <div class="col  col-xs-12 col-3">
                         <div class="img-box circle">
                             <img src="images/client.jpg" class="img-box__image" alt="testimonial">
                         </div>
                     </div>
-                    <div class="carousel-item__desc col col-9">
+                    <div class="carousel-item__desc col col-xs-12 col-9">
                         <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
                         <h3>Jon Doe</h3>
                     </div>
                 </div>
-
+                    <div class="carousel-item row ">
+                        <div class="col col-xs-12 col-3">
+                            <div class="img-box circle">
+                                <img src="images/client.jpg" class="img-box__image" alt="testimonial">
+                            </div>
+                        </div>
+                        <div class="carousel-item__desc col col-xs-12 col-9">
+                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                            <h3>Jon Doe</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <span class=" carousel__arrow arrow-prev"></span>
+            <span class="carousel__arrow arrow-next"></span>
         </div>
     </section>
 
@@ -598,28 +608,28 @@
                 <h3 class="content__subtitle">Happy clients</h3>
                 <h2 class="content__title">What people say</h2>
             </div>
-            <div class="reviews-container ">
+            <div class="reviews-container mobile-wrap">
                 
                 <div class="row reviews__row">
-                    <div class="col col-6 row">
-                        <div class="col col-3">
+                    <div class="col  col-mobile-12 col-6 row">
+                        <div class="col col-xs-12  col-3">
                             <div class="img-box circle">
                                 <img src="images/Matthew-Dix.jpg" class="img-box__image" alt="Matthew Dix">
                             </div>
                         </div>
-                        <div class="reviews__text col col-9 ">
+                        <div class="reviews__text col col-xs-12  col-9 ">
                             <h5>Matthew Dix</h5>
                             <h6>Graphic Design</h6>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
                         </div>
                     </div>
-                    <div class="col col-6 row">
-                        <div class="col col-3">
+                    <div class="col col-mobile-12 col-6 row">
+                        <div class="col col-xs-12  col-3">
                             <div class="img-box circle">
                             <img src="images/Nick-Karvounis.jpg" class="img-box__image" alt="Nick Karvounis">
                             </div>
                             </div>
-                        <div class="reviews__text col col-9">
+                        <div class="reviews__text col col-xs-12  col-9">
                             <h5>Nick Karvounis</h5>
                             <h6>Graphic Design</h6>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
@@ -628,25 +638,25 @@
                 </div>
 
                 <div class="row reviews__row">
-                    <div class="col col-6 row">
-                        <div class="col col-3">
+                    <div class="col col-mobile-12 col-6 row">
+                        <div class="col col-xs-12 col-3">
                             <div class="img-box circle">
                                 <img src="images/Jaelynn-Castillo.jpg" class="img-box__image" alt="Jaelynn Castillo">
                             </div>
                         </div>
-                        <div class="reviews__text col col-9">
+                        <div class="reviews__text col col-xs-12 col-9">
                             <h5>Jaelynn Castillo</h5>
                             <h6>Graphic Design</h6>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
                         </div>
                     </div>
-                    <div class="col col-6 row">
-                        <div class="col col-3">
+                    <div class="col col-mobile-12 col-6 row">
+                        <div class="col col-xs-12 col-3">
                             <div class="img-box circle">
                                 <img src="images/Mike-Petrucci.jpg" class="img-box__image" alt="Mike Petrucci">
                             </div>
                         </div>
-                        <div class="reviews__text col col-9">
+                        <div class="reviews__text col col-xs-12  col-9">
                             <h5>Mike Petrucci</h5>
                             <h6>Graphic Design</h6>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
@@ -668,7 +678,7 @@
             <div class="blog-container">
                 <div class="row gaps equal-columns-3">
 
-                    <div class="col">
+                    <div class="col col-mobile-12 img-box-container">
                         <div class="img-box">
                             <img src="images/girl-white-office.jpg" class="img-box__image" alt="girl">
                         </div>
@@ -686,7 +696,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col col-mobile-12 img-box-container">
                         <div class="img-box">
                             <img src="images/coffe-time.jpg" class="img-box__image" alt="coffee">
                         </div>
@@ -704,7 +714,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col col-mobile-12 img-box-container">
                         <div class="img-box">
                             <img src="images/analisis.jpg" class="img-box__image" alt="analisis">
                         </div>
@@ -732,10 +742,10 @@
     </section>
 
     <footer class="grey-bg">
-        <div class="container">
+        <div class="container mobile-wrap">
             <div class="row gaps footer">
 
-                <div class="col footer-col-5">
+                <div class="col col-mobile-12 footer-col-5">
                     <h2 class="footer__logo">
                             MoGo
                     </h2>
@@ -795,7 +805,7 @@
                     </form>
                 </div>
 
-                <div class="col footer-col-4">
+                <div class="col col-mobile-12 footer-col-4">
                     <h5>Blogs</h5>
 
                     <div class="blog-item">
@@ -824,7 +834,7 @@
 
                 </div>
 
-                <div class="col footer-col-3">
+                <div class="col col-mobile-12 footer-col-3">
                     <h5>Instagram</h5>
 
                     <div class="instagram">
@@ -869,7 +879,7 @@
                 </div>
             </div>
             <div class="copyright row items-center">
-                <h6>© 2016 MoGo free PSD template by <span>Laaqiq</span></h6>
+                <h6>© 2016 MoGo free PSD template by <span>Laaqiq</span> | Developed by <a href="https://github.com/victoria-kholina">Victoria Shupliak</a></h6>
             </div>
         </div>
     </footer>
@@ -908,6 +918,6 @@
         </symbol>
     </svg>
     <script src="js/main.js"></script>
-<script src="js/carousel.js"></script>
+    <script src="js/carousel-slide.js"></script>
 </body>
 </html>

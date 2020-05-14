@@ -4,7 +4,7 @@
 
 .menu {
   display: none;
-  margin-top: 10px;
+  margin-top: 5px;
   font-size: 14px;
   text-transform: uppercase;
   @include only-mobile {
@@ -19,14 +19,17 @@
     justify-content: flex-end;
     -ms-flex-pack: end;
   }
+  @include small-desktop {
+    margin-top: 10px;
+  }
   &__item {
-    margin: 0 15px;
+    margin: 0 8px;
     border-bottom: 3px solid transparent;
     @include only-mobile {
       padding: 5px 0;
     }
     @include small-desktop {
-      margin: 0 25px;
+      margin: 0 28px;
     }
     &:hover,
     &:focus {
@@ -40,7 +43,7 @@
   &__icon {
     margin-left: 15px;
     @include small-desktop {
-      margin-left: 25px;
+      margin-left: 28px;
     }
     a {
       line-height: 1em;
@@ -144,5 +147,26 @@
     @include only-mobile {
       padding: 0 5px;
     }
+  }
+}
+
+.search {
+  white-space: nowrap;
+  &__input {
+    vertical-align: top;
+    width: 0;
+    padding: 0!important;
+    opacity: 0;
+    border: none;
+    margin-right: 5px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #fff;
+    font-style: italic;
+    cursor: pointer;
+  }
+  &-icon {
+    cursor: pointer;
   }
 }

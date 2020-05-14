@@ -21,13 +21,18 @@
       flex-basis: 0;
     }
   }
+  .col-2,
+  .col-10 {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
 }
 
 .welcome-desc {
   text-align: center;
 
   @include desktop-large-height {
-    margin-top: 15px;
+    margin-top: 20px;
   }
 
   &__title {
@@ -42,7 +47,7 @@
     }
     @include desktop-large-height {
       font-size: 150px;
-      padding-top: 25px;
+      //padding-top: 25px;
     }
 
     &:after {
@@ -58,6 +63,7 @@
   }
   &__subtitle {
     font-size: 32px;
+    padding-bottom: 15px;
     @include large-mobile {
       font-size: 52px;
     }

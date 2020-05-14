@@ -1,5 +1,6 @@
 /*** Grid  ***/
 @import "mixin.scss";
+@import "img-box";
 
 @mixin tablet {
   @media (min-width: 768px) { @content; }
@@ -14,9 +15,7 @@
 }
 
 .container {
-  width: 100%;
   margin: 0 auto;
-
   @include tablet {
       max-width: 720px;
   }
@@ -24,6 +23,7 @@
       max-width: 960px;
   }
   @include desktop {
+    width: 100%;
       max-width: 1200px;
   }
 }
@@ -66,13 +66,11 @@
   }
 }
 
-/*** Mobile  ***/
+/*** General ***/
 .col {
   -ms-flex-positive: 1;
   flex-grow: 1;
-  width: 100%;
 }
-
 .col-10 {
   max-width: 83%;
 }
@@ -101,49 +99,40 @@
   max-width: 17%;
 }
 
+/*** Only on small mobile ***/
 
-/*** Tablet  ***/
-
-@include tablet {
-  .col {
-    flex-basis: 0;
+@include only-small-mobile  {
+  .col-xs-12 {
+    max-width: 100%;
+    width: 100%;
   }
-  .equal-columns-5 .col {
-    max-width: 20%;
-  }
-  .equal-columns-4 .col {
-    max-width: 25%;
-  }
-  .equal-columns-3 .col {
-    max-width: 33.3333%;
-  }
-  .equal-columns-2 .col {
-    max-width: 50%;
-  }
-}
-@include large-mobile {
-  .footer-col-5 {
-    flex-basis: auto;
-  }
-  .footer-col-4,
-  .footer-col-3 {
-    flex-basis: 0;
-    max-width: 50%;
+  .mobile-wrap {
+    margin: 0 auto;
+    max-width: 380px;
   }
 }
 
-@include small-desktop {
-  .footer-col-5 {
-    max-width: 480px;
-    flex-basis: 0;
-  }
-  .footer-col-4 {
-    max-width: 390px;
-  }
-  .footer-col-3 {
-    max-width: 270px;
+/*** Only for mobile ***/
+
+@include only-mobile {
+  .col-mobile-12 {
+    max-width: 100%;
+    width: 100%;
   }
 }
+
+/*** Only for large mobile ***/
+
+@include only-large-mobile {
+  .col-sm-2 {
+    max-width: 17%;
+  }
+  .col-sm-10 {
+    max-width: 83%;
+  }
+}
+
+/*** Only for tablet ***/
 
 @include only-tablet {
   .col-sm-3 {
@@ -161,8 +150,61 @@
   }
 }
 
-@include only-small-mobile {
-  .col {
-    max-width: 100%;
+/*** Started from large Mobile ***/
+
+@include large-mobile {
+  .footer-col-5 {
+    flex-basis: auto;
+  }
+  .footer-col-4,
+  .footer-col-3 {
+    flex-basis: 0;
+    max-width: 50%;
   }
 }
+
+/*** Started from Tablet  ***/
+
+@include tablet {
+  .col {
+    flex-basis: 0;
+  }
+  .col-tablet-2 {
+    max-width: 17%;
+  }
+  .col-tablet-10 {
+    max-width: 83%;
+  }
+  .col-tablet-12 {
+    max-width: 100%;
+  }
+  .equal-columns-5 .col {
+    max-width: 20%;
+  }
+  .equal-columns-4 .col {
+    max-width: 25%;
+  }
+  .equal-columns-3 .col {
+    max-width: 33.3333%;
+  }
+  .equal-columns-2 .col {
+    max-width: 50%;
+  }
+}
+
+/*** Started from small Desktop ***/
+
+@include small-desktop {
+  .footer-col-5 {
+    max-width: 480px;
+    flex-basis: 0;
+  }
+  .footer-col-4 {
+    max-width: 390px;
+  }
+  .footer-col-3 {
+    max-width: 270px;
+  }
+}
+
+

@@ -17,7 +17,10 @@
     }
   }
   &__row {
-    @include large-mobile {
+    @include only-small-mobile {
+      text-align: center;
+    }
+    @include tablet {
       padding-bottom: 60px;
     }
     .row {
@@ -25,11 +28,16 @@
       @include desktop {
         padding: 0 40px;
       }
+      &>.col {
+        @include only-large-mobile {
+          padding-bottom: 20px;
+        }
+      }
     }
   }
   &__text {
-    @include only-small-mobile {
-      text-align: center;
+    @include only-mobile {
+      padding: 20px;
     }
     @include large-mobile {
       padding: 5px 0 0 20px;
@@ -48,18 +56,18 @@
       font-style: italic;
     }
     p {
-      @include large-mobile {
-        max-width: 370px;
-      }
       &:before {
         @include pseudo-elem(block);
         @include line($secondary-color);
-        margin: 5px auto 15px;
+        margin: 5px 0;
+        @include small-mobile {
+          margin: 10px auto;
+        }
         @include large-mobile {
           margin: 10px 0;
         }
         @include small-desktop {
-          margin: 10px 0 20px;
+          margin: 15px 0 20px;
         }
       }
     }
@@ -68,17 +76,12 @@
   .img-box {
     width: 90px;
     height: 90px;
-    @include only-small-mobile {
-      margin: 30px auto 20px;
+    @include only-mobile {
+      margin: 0 auto;
     }
     @include small-desktop {
       width: 115px;
       height: 115px;
-    }
-  }
-  .col {
-    @include only-large-mobile {
-      flex-basis: 0;
     }
   }
 }

@@ -42,8 +42,9 @@
     }
   }
   &__desc {
-    max-width: 300px;
-    margin: 0 auto;
+    @include only-mobile {
+      padding: 10px 20px;
+    }
     @include tablet {
       max-width: 250px;
       float: right;

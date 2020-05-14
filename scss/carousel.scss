@@ -1,119 +1,46 @@
 @import "vars";
 @import "mixin";
 
-.grey-bg {
-  background-color: #f8f8f8;
-}
 .carousel {
   position: relative;
-  &-body {
-    overflow-y: hidden;
-    overflow-x: scroll;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    min-height: 200px;
-    max-width: 600px;
+  &-wrapper {
+    overflow: hidden;
     position: relative;
+    margin: 0 auto;
+  }
+  &-wrapper,
+  &-item {
+    width: 100%;
+    max-width: 320px;
+    @media screen and (min-width:  400px){
+      max-width: 380px;
+    }
+    @include large-mobile {
+      max-width: 550px;
+    }
     @include tablet {
-      height: 290px;
+      min-height: 290px;
+      max-width: 600px;
     }
     @include small-desktop {
       max-width: 860px;
     }
+    @include desktop {
+      max-width: 1100px;
+    }
   }
-
-  &-item {
-    position: relative;
-    overflow: hidden;
+  &-track {
+    display: flex;
     align-items: center;
-    -ms-flex-align: center;
-    min-width: 100%;
-    width: 100%;
+    position: relative;
     height: 100%;
-    @include only-small-mobile {
-      padding: 50px 0;
-      text-align: center;
-    }
-    &__desc {
-      font-style: italic;
-      font-size: 18px;
-      padding-top: 10px;
-      @include only-small-mobile {
-        padding-right: 30px;
-      }
-      @include small-desktop {
-        font-size: 24px;
-      }
-
-      p {
-        line-height: 1.5em;
-        padding-bottom: 10px;
-        @include only-mobile {
-          padding: 0 20px;
-        }
-      }
-
-      h3 {
-        &:before {
-          @include large-mobile {
-            @include pseudo-elem(inline-block);
-            @include line($secondary-color);
-            margin: 0 10px 6px 0;
-          }
-        }
-
-        &:after {
-          @include only-small-mobile {
-            @include pseudo-elem(block);
-            @include line($secondary-color);
-            margin: 10px auto 0;
-          }
-        }
-
-        @include only-small-mobile {
-          padding-top: 20px;
-        }
-      }
-    }
-
-    .col {
-      @include only-large-mobile {
-        flex-basis: 0;
-      }
-    }
-
-    .img-box {
-      @include only-small-mobile {
-        margin: 0 auto;
-        margin-bottom: 10px;
-      }
+    cursor: pointer;
+    width: 10000px; //max width of carousel track
+    &.transition {
+      transition: left 0.5s ease-in-out;
     }
   }
-
-  .bordered {
-    width: 110px;
-    height: 110px;
-
-    @include tablet {
-      width: 145px;
-      height: 145px;
-    }
-    @include small-desktop {
-      margin-left: 20px;
-    }
-  }
-
-  .circle {
-    width: 155px;
-    height: 155px;
-    @include small-desktop {
-      width: 215px;
-      height: 215px;
-    }
-  }
-
-  .carousel__arrow {
+  &__arrow {
     width: 12px;
     height: 12px;
     position: absolute;
@@ -122,59 +49,130 @@
     border-top: 3px solid #ccc;
     border-left: 3px solid #ccc;
     cursor: pointer;
-  }
-  .arrow-prev {
-    left: 10px;
-    transform: rotate(-45deg);
-    @include small-mobile {
-      left: 20px;
+    &.arrow-prev {
+      left: 10px;
+      transform: rotate(-45deg);
+      @include small-mobile {
+        left: -10px;
+      }
+      @include large-mobile {
+        left: -20px;
+      }
+      @include small-desktop {
+        left: 25px;
+      }
     }
-  }
-  .arrow-next {
-    right: 15px;
-    transform: rotate(135deg);
-    @include small-mobile {
-      right: 25px;
-
+    &.arrow-next {
+      right: 15px;
+      transform: rotate(135deg);
+      @include small-mobile {
+        right: -10px;
+      }
+      @include large-mobile {
+        right: -20px;
+      }
+      @include small-desktop {
+        right: 25px;
+      }
     }
   }
 }
 
-.carousel-section {
-  &.grey-bg .carousel-body {
-    @include desktop {
-      max-width: 1010px;
-    }
+.carousel-item {
+  align-items: center;
+  @include only-small-mobile {
+    padding: 50px 0;
+    text-align: center;
   }
-  &.grey-bg .carousel-item__desc {
-    padding-left: 30px;
-    @include tablet {
-      padding-left: 20px;
+  &__desc {
+    font-style: italic;
+    font-size: 18px;
+    padding-top: 10px;
+    @include small-mobile {
+      padding: 10px 10px 0;
     }
     @include small-desktop {
-      padding-left: 45px;
+      font-size: 24px;
     }
+    p {
+      line-height: 1.5em;
+      padding-bottom: 10px;
+    }
+    h3 {
+      &:before {
+        @include large-mobile {
+          @include pseudo-elem(inline-block);
+          @include line($secondary-color);
+          margin: 0 10px 6px 0;
+        }
+      }
+      &:after {
+        @include only-small-mobile {
+          @include pseudo-elem(block);
+          @include line($secondary-color);
+          margin: 10px auto 0;
+        }
+      }
+      @include only-small-mobile {
+        padding-top: 20px;
+      }
+    }
+  }
+  .col {
+    @include only-large-mobile {
+      flex-basis: 0;
+    }
+  }
+  .img-box {
+    @include only-small-mobile {
+      margin: 0 auto 10px;
+    }
+    &.bordered {
+      width: 110px;
+      height: 110px;
+      @include tablet {
+        width: 145px;
+        height: 145px;
+      }
+      @include small-desktop {
+      margin: 0 auto;
+      }
+    }
+    &.circle {
+      width: 155px;
+      height: 155px;
+      @include small-desktop {
+        width: 215px;
+        height: 215px;
+      }
+    }
+  }
+}
+
+.grey-bg {
+  background-color: #f8f8f8;
+}
+
+.carousel-section {
+  align-items: center;
+  -ms-flex-align: center;
+  min-height: 200px;
+  .carousel-item__desc {
+    padding-left: 0;
   }
 }
 
 .carousel-reviews {
   min-height: 340px;
-  align-items:  center;
-  -ms-flex-align: center;
+  @extend .carousel-section;
   @include small-desktop {
-    height: 440px;
+   min-height: 400px;
+    margin-bottom: 35px;
   }
-  .carousel-body {
-    @include small-desktop {
-      margin-bottom: 40px;
-    }
+  .carousel-wrapper,
+  .carousel-item {
     @include desktop {
       max-width: 1035px;
-    }
-  }
-  .carousel-item__desc {
-    @include to-desktop {
-      padding-left: 30px;
     }
   }
 }

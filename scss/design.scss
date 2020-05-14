@@ -18,6 +18,9 @@
       width: 100%;
       max-width: 400px;
     }
+    @include desktop {
+      margin-right: 50px;
+    }
   }
   &__wrapper {
     position: relative;
@@ -34,6 +37,9 @@
       right: 0;
       @include only-mobile {
         width: 200px;
+      }
+      @include desktop {
+        right: 30px;
       }
     }
   }
