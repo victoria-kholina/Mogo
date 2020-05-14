@@ -8,6 +8,10 @@
   position: relative;
   overflow: hidden;
   z-index: 0;
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
   &:after {
     @include pseudo-elem(block);
     @include line($secondary-color);

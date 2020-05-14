@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b8830ec-5d3c-4ee9-9ab1-ff2bdae3e939" name="Default" comment="carousel with CSS animation">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/eagle.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/eagle.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/gallery-img-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/gallery-img-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/gallery-img-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/gallery-img-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/iphone.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/iphone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/welcome.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/animation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/animation.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/blog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/blog.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/carousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/carousel.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/form.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/grid.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/map.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/map.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/menu.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/reviews.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/reviews.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/service.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/service.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/welcome.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/welcome.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+            <state relative-caret-position="143">
+              <caret line="462" column="31" lean-forward="true" selection-start-line="462" selection-start-column="31" selection-end-line="462" selection-end-column="31" />
               <folding>
                 <element signature="n#style#0;n#iframe#0;n#div#0;n#section#12;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -63,11 +59,44 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/menu.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="258">
               <caret line="154" column="5" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/map.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="176">
+                <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../to-do-list/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="132">
+                <caret line="6" selection-start-line="6" selection-end-line="14" selection-end-column="69" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -113,8 +142,8 @@
       <find>10px;</find>
       <find>SEARC</find>
       <find>carouse</find>
-      <find>map</find>
       <find>heade</find>
+      <find>map</find>
     </findStrings>
     <replaceStrings>
       <replace>flex-row</replace>
@@ -176,19 +205,20 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/scss/animation.scss" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/scss/blog.scss" />
         <option value="$PROJECT_DIR$/scss/carousel.scss" />
         <option value="$PROJECT_DIR$/scss/design.scss" />
         <option value="$PROJECT_DIR$/scss/footer.scss" />
         <option value="$PROJECT_DIR$/scss/form.scss" />
         <option value="$PROJECT_DIR$/scss/grid.scss" />
-        <option value="$PROJECT_DIR$/scss/map.scss" />
         <option value="$PROJECT_DIR$/scss/reviews.scss" />
         <option value="$PROJECT_DIR$/scss/service.scss" />
         <option value="$PROJECT_DIR$/scss/style.scss" />
         <option value="$PROJECT_DIR$/scss/welcome.scss" />
         <option value="$PROJECT_DIR$/scss/menu.scss" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/scss/map.scss" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -240,7 +270,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../carousel-CSS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../to-do-list/README.md" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -413,7 +443,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="408498000" />
+    <option name="totallyTimeSpent" value="410147000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -428,14 +458,14 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4783654" visible="true" weight="0.14697987" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8707483" visible="true" weight="0.14697987" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Gulp" order="2" sideWeight="0.52163464" side_tool="true" visible="true" weight="0.14697987" />
-      <window_info id="npm" order="3" side_tool="true" />
+      <window_info id="Gulp" order="2" sideWeight="0.1292517" side_tool="true" visible="true" weight="0.14697987" />
+      <window_info id="npm" order="3" sideWeight="0.5127479" side_tool="true" weight="0.14697987" />
       <window_info id="Favorites" order="4" sideWeight="0.50165564" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3753541" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3753541" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -525,8 +555,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="carousel with CSS animation" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/rbg.css" />
-    <entry file="file://$PROJECT_DIR$/css/sprites.css" />
     <entry file="file://$PROJECT_DIR$/scss/material-icons.scss" />
     <entry file="file://$PROJECT_DIR$/images/svg/all.svg" />
     <entry file="file://$PROJECT_DIR$/images/svg/facebook-letter-logo.svg">
@@ -702,13 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/map.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/mixin.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
@@ -793,6 +814,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../to-do-list/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="132">
+            <caret line="6" selection-start-line="6" selection-end-line="14" selection-end-column="69" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="176">
+            <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/menu.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="154" column="5" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/map.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scss/service.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -802,18 +857,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+        <state relative-caret-position="143">
+          <caret line="462" column="31" lean-forward="true" selection-start-line="462" selection-start-column="31" selection-end-line="462" selection-end-column="31" />
           <folding>
             <element signature="n#style#0;n#iframe#0;n#div#0;n#section#12;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/menu.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="154" column="5" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
         </state>
       </provider>
     </entry>
