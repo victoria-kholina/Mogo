@@ -1,4 +1,10 @@
 @import "vars";
+.animation {
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+}
+
 @keyframes show-from-right {
   0% { right: -100px; }
   50% { right: 30px; }
@@ -22,6 +28,13 @@
   0% { height: 0 }
   100% { height: $height-accordion-item;  }
 }
+.open-search {
+  animation-name: open-search;
+}
+.close-search {
+  animation-name: close-search;
+}
+
 @keyframes open-search {
   0% {
     width: 0;
@@ -47,14 +60,28 @@
     opacity: 0;
   }
 }
-.open-search {
-  animation-name: open-search;
+
+.open-map {
+  animation-name: open-map;
 }
-.close-search {
-  animation-name: close-search;
+.close-map {
+  animation-name: close-map;
 }
-.animation {
- animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-duration: 0.5s;
+
+@keyframes open-map {
+  0% {
+    top: 100%
+  }
+  100% {
+    top: 0
+  }
+}
+
+@keyframes close-map {
+  0% {
+    top: 100%
+  }
+  100% {
+    top: 0;
+  }
 }

@@ -13,9 +13,10 @@
     padding: 0 15px;
     border: 1px solid #e7e7e7;
     border-right: none;
+    height: 40px;
     width: 170px;
     @include small-mobile {
-      width: 200px;
+      width: 190px;
     }
     @include desktop {
       width: 230px;

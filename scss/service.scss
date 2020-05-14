@@ -16,9 +16,11 @@
     }
     @include tablet {
       padding: 5px  10px;
+      flex-basis: 0;
     }
     @include desktop {
       padding: 25px  30px;
+      flex-basis: auto;
     }
     @include to-sm-desktop {
       text-align: center;

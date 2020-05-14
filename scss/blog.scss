@@ -38,7 +38,10 @@
     }
   }
   .col {
-    @include  only-mobile {
+    @include tablet {
+        flex-basis: 0;
+    }
+    @include only-mobile {
       margin-bottom: 40px;
     }
   }

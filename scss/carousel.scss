@@ -11,9 +11,9 @@
   &-wrapper,
   &-item {
     width: 100%;
-    max-width: 320px;
-    @media screen and (min-width:  400px){
-      max-width: 380px;
+    max-width: 280px;
+    @media screen and (min-width:  375px){
+      max-width: 340px;
     }
     @include large-mobile {
       max-width: 550px;
@@ -50,27 +50,15 @@
     border-left: 3px solid #ccc;
     cursor: pointer;
     &.arrow-prev {
-      left: 10px;
+      left: -10px;
       transform: rotate(-45deg);
-      @include small-mobile {
-        left: -10px;
-      }
-      @include large-mobile {
-        left: -20px;
-      }
       @include small-desktop {
         left: 25px;
       }
     }
     &.arrow-next {
-      right: 15px;
+      right: -10px;
       transform: rotate(135deg);
-      @include small-mobile {
-        right: -10px;
-      }
-      @include large-mobile {
-        right: -20px;
-      }
       @include small-desktop {
         right: 25px;
       }
@@ -119,8 +107,11 @@
     }
   }
   .col {
-    @include only-large-mobile {
+    @include tablet {
       flex-basis: 0;
+    }
+    @include desktop {
+      flex-basis: auto;
     }
   }
   .img-box {
@@ -157,9 +148,17 @@
   align-items: center;
   -ms-flex-align: center;
   min-height: 200px;
-  .carousel-item__desc {
-    padding-left: 0;
+  &:after,
+  .carousel-item:after {
+    content:'';
+    min-height:inherit;
+    font-size:0;
   }
+    .img-box {
+      @include only-large-mobile {
+      margin: 10px 0 0 10px;
+      }
+    }
 }
 
 .carousel-reviews {
@@ -169,10 +168,16 @@
    min-height: 400px;
     margin-bottom: 35px;
   }
+
   .carousel-wrapper,
   .carousel-item {
     @include desktop {
       max-width: 1035px;
+    }
+  }
+  .carousel-item__desc {
+    @include only-large-mobile {
+      margin-left: 30px;
     }
   }
 }

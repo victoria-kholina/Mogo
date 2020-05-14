@@ -6,6 +6,22 @@ if (window.innerWidth < 767) {
              toggleClasses(menuMobile, "hide-to-right", "show-from-right" )
     }
 }
+let welcomeItems = document.getElementsByClassName("menu-item");
+for(let item of welcomeItems) {
+    item.onclick = function(event) {
+        for(let item of welcomeItems) {
+            item.classList.remove("active")
+        }
+        this.classList.add("active");
+    }
+}
+document.getElementById("contacts").onclick = function(event) {
+  let map = document.getElementById("map");
+  map.classList.contains("open-map") ?
+      toggleClasses(map, "open-map", "close-map" ) :
+      toggleClasses(map, "open-map", "open-map" )
+}
+
 for(let icon of document.getElementsByClassName("search-icon")) {
     icon.onclick = function() {
         let input = icon.closest(".search").querySelector(".search-input")

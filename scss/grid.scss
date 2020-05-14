@@ -17,13 +17,13 @@
 .container {
   margin: 0 auto;
   @include tablet {
-      max-width: 720px;
+    width: 100%;
+     max-width: 720px;
   }
   @include small-desktop {
       max-width: 960px;
   }
   @include desktop {
-    width: 100%;
       max-width: 1200px;
   }
 }
@@ -43,6 +43,7 @@
   align-items: center;
   -ms-flex-align: center;
   justify-content: center;
+
 }
 
 .space-between {
@@ -71,6 +72,7 @@
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
+
 .col-10 {
   max-width: 83%;
 }
@@ -141,9 +143,6 @@
   .col-sm-9 {
     max-width: 75%;
   }
-  .footer-col-5 {
-    flex-basis: auto;
-  }
   .footer-col-4,
   .footer-col-3 {
     max-width: 50%;
@@ -153,9 +152,6 @@
 /*** Started from large Mobile ***/
 
 @include large-mobile {
-  .footer-col-5 {
-    flex-basis: auto;
-  }
   .footer-col-4,
   .footer-col-3 {
     flex-basis: 0;
@@ -166,9 +162,6 @@
 /*** Started from Tablet  ***/
 
 @include tablet {
-  .col {
-    flex-basis: 0;
-  }
   .col-tablet-2 {
     max-width: 17%;
   }

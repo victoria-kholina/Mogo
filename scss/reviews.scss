@@ -16,6 +16,11 @@
       padding-top: 40px;
     }
   }
+  @include tablet {
+    .col {
+      flex-basis: 0;
+    }
+  }
   &__row {
     @include only-small-mobile {
       text-align: center;
@@ -59,7 +64,7 @@
       &:before {
         @include pseudo-elem(block);
         @include line($secondary-color);
-        margin: 5px 0;
+        margin: 5px auto;
         @include small-mobile {
           margin: 10px auto;
         }
