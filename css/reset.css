@@ -70,11 +70,13 @@ a:hover,
 a:active {
     text-decoration: none;
 }
-button:active,
-button:hover,
-button:focus {
+*:active,
+*:hover,
+*:focus {
     outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+
 
 select,
 input,

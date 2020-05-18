@@ -1,9 +1,15 @@
 if (window.innerWidth < 767) {
     document.getElementById("mobile-menu-icon").onclick =  function () {
         let menuMobile = document.getElementById("menu");
-        menuMobile.classList.contains("show-from-right") ?
-             toggleClasses(menuMobile, "show-from-right", "hide-to-right" ) :
-             toggleClasses(menuMobile, "hide-to-right", "show-from-right" )
+        let svgIdElem= this.getElementsByTagName("use")[0];
+        if(menuMobile.classList.contains("show-from-right") ) {
+            toggleClasses(menuMobile, "show-from-right", "hide-to-right" );
+            svgIdElem.setAttribute("xlink:href", "#menu-mobile");
+        } else {
+            toggleClasses(menuMobile, "hide-to-right", "show-from-right" )
+            svgIdElem.setAttribute("xlink:href", "#menu-close");
+        }
+
     }
 }
 let welcomeItems = document.getElementsByClassName("menu-item");

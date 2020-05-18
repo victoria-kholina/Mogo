@@ -2,11 +2,18 @@
 @import "mixin";
 
 .welcome {
+  position: relative;
+  overflow: hidden;
   background-image: linear-gradient(rgba(232, 130, 130, 0.9), rgba(252, 227, 138, 0.9)), url("../images/eagle.jpg");
   background-position: center center;
   background-size: cover;
   color: #fff;
   z-index: 0;
+  header {
+    @include tablet {
+      height: 35px;
+    }
+  }
   .container {
     height: 100vh;
     padding-top: 25px;
